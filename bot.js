@@ -10,11 +10,4 @@ client.on('ready', () => {
   console.log('=======================================')
 });
 
-client.on('message',function(message) {
-    
-    if(message.content.startsWith("<@481969532509093898>")) {
-        message.channel.send('مرحبا انا البنك المركزي للسيد سلطان ')
-
-    }
-});
 client.login(process.env.TOKEN);
