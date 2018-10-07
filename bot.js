@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = '*'
 client.on('ready', () => {
   console.log('======================================')
   console.log(`Logged in as ${client.user.tag}!`);
@@ -10,4 +11,11 @@ client.on('ready', () => {
   console.log('=======================================')
 });
 
-client.login(process.env.TOKEN);
+client.on('message', message => {
+ if(message.content.startsWith(prefix + "come")) {
+message.member.voiceChannel.join();
+}
+});
+
+
+client.login(process.env.BOT_TOKEN);
