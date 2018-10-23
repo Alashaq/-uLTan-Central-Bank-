@@ -14,7 +14,7 @@ client.on('ready', () => {
 client.on('message', function(message) {
 	const myID = "501731957877768192";
     let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith(prefix + "howareyoualashaq")) {
+    if(message.content.startsWith(prefix + "watch")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setUsername(args);
